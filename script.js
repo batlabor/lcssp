@@ -84,7 +84,7 @@ let editorCss = monaco.editor.create(cssContainer, {
 
 // SET DEFAULT VALUE
 let valueTest = `/***************************************************
-  Wellcome to Less CSS Playground!
+  Welcome to Less CSS Playground!
 
   You can write any "less css" syntax here and see the
   compiled css in the second window.

@@ -1,3 +1,4 @@
-# lcssp
+# Less.css Playground  - lcssp
 
-[Edit in StackBlitz next generation editor ⚡️](https://stackblitz.com/~/github.com/batlabor/lcssp)
+A simple (static) playground with less.js and Monaco Editor.
+
