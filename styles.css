@@ -1,0 +1,11 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  position: relative;
+  min-height: 100%;
+}

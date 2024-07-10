@@ -1,0 +1,145 @@
+:root {
+  --monaco-dark: #1e1e1e;
+}
+
+html,
+body {
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+  font-family: sans-serif;
+}
+
+.playground-wrapper {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  height: 100%;
+  gap: 8px;
+  background: var(--monaco-dark);
+  color: white;
+}
+
+.playground-wrapper::before {
+  content: '';
+  display: block;
+  flex: 0;
+  position: absolute;
+  min-height: 100%;
+  width: 0;
+  border-right: 2px dotted black;
+  left: 50%;
+  margin-left: 4px;
+  z-index: 50;
+}
+
+.playground-wrapper.light {
+  background: white;
+}
+.playground-wrapper.light::before {
+  border-right: 2px dotted #ccc;
+}
+
+.editor {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.playground-wrapper .toolbar svg {
+  fill: white;
+  transition: 0.25s all ease-in-out;
+}
+
+.playground-wrapper .toolbar .theme svg {
+  transition: 0.25s all ease-in-out;
+}
+
+.playground-wrapper.light {
+  color: var(--monaco-dark);
+}
+
+.playground-wrapper.light .toolbar svg {
+  fill: var(--monaco-dark);
+}
+
+.playground-wrapper.light .toolbar .theme svg {
+  transform: rotate(360deg);
+}
+
+.editor-container {
+  flex: 1;
+}
+.editor.css {
+  opacity: 0.8;
+}
+
+.editor {
+  flex: 1;
+}
+
+.toolbar {
+  display: flex;
+}
+
+.title {
+  font-size: 3em;
+  padding: 16px;
+  margin: 0;
+  flex: 0;
+  width: 100%;
+}
+.title small {
+  font-size: 14px;
+  text-transform: uppercase;
+  display: inherit;
+  text-align: center;
+}
+
+.buttons-toolbar {
+  padding: 16px;
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button {
+  width: 64px;
+  height: 64px;
+  flex: 0;
+  margin: auto;
+  margin-left: 16px;
+  margin-right: 0;
+  opacity: 0.35;
+  cursor: pointer;
+  transition: 0.25s all ease-in-out;
+}
+
+.button:hover {
+  opacity: 1;
+}
+
+.button {
+  .icon {
+    display: block;
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+  }
+  .text {
+    font-size: 12px;
+    width: 48px;
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+  }
+}
+
+.monaco-editor {
+  outline: 0 !important;
+}
