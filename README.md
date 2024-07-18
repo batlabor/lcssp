@@ -1,6 +1,6 @@
 # LCSSP - Less.css Playground
 
-A simple (static) playground with less.js and Monaco Editor.
+A simple (static) vanilla js playground with less.js and Monaco Editor.
 
 # Screenshots
 
