@@ -9,4 +9,4 @@ A simple (static) playground with less.js and Monaco Editor.
 ![Light Mode](screenshot-light.png)
 
 # Demo
-Here: https://stackblitz.com/edit/stackblitz-lcssp?file=static%2Findex.html
+Here: https://stackblitz.com/edit/lcssp?file=index.html
