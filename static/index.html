@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>
+      Static Less CSS Playground with Less.js and Monaco Editor - browser
+      edition
+    </title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link
+      rel="stylesheet"
+      data-name="vs/editor/editor.main"
+      href="../node_modules/monaco-editor/min/vs/editor/editor.main.css"
+    />
+    <link rel="stylesheet/less" type="text/css" href="playground.less" />
+  </head>
+  <body>
+    <!-- PLAYGROUND -->
+    <div id="pl" class="playground">
+      <div class="grid head no-select">
+        <h2 class="grid-item head less" onclick="LessFile.click();">
+          <div class="text">{less}</div>
+          <div class="alt pl">Playground</div><div class="alt file">Open file</div>
+        </h2>
+        <div class="grid-item button-cnt theme">
+          <div class="button theme" onclick="switchTheme()">
+            <div class="icon">
+              <svg
+                width="100%"
+                height="100%"
+                viewBox="0 0 48 48"
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                xml:space="preserve"
+                style="
+                  fill-rule: evenodd;
+                  clip-rule: evenodd;
+                  stroke-linejoin: round;
+                  stroke-miterlimit: 2;
+                "
+              >
+                <rect
+                  id="css"
+                  x="0"
+                  y="0"
+                  width="48"
+                  height="48"
+                  style="fill: none"
+                ></rect>
+                <path
+                  d="M15.34,19c2.759,-4.78 8.88,-6.42 13.66,-3.66c4.78,2.759 6.42,8.88 3.66,13.66c-2.759,4.78 -8.88,6.42 -13.66,3.66c-4.78,-2.759 -6.42,-8.88 -3.66,-13.66Zm12.879,-2.307l-8.438,14.614c4.033,2.328 9.198,0.945 11.526,-3.088c2.328,-4.033 0.945,-9.198 -3.088,-11.526Z"
+                ></path>
+              </svg>
+            </div>
+            <div class="text">Theme</div>
+          </div>
+        </div>
+        <div class="grid-item button-cnt less raw">
+          <div class="button raw" onclick="rawDownload('less')">🡇 RAW</div>
+        </div>
+        <h2 class="grid-item head css">
+          <div class="text">{css}</div>
+          <div class="alt">
+            Compiled
+            <span id="badge" class="hidden">!</span>
+          </div>
+        </h2>
+        <div class="grid-item button-cnt css raw">
+          <div class="button raw" onclick="rawDownload('css')">🡇 RAW</div>
+        </div>
+      </div>
+      <div class="grid editors">
+        <div class="grid-item editor less">
+          <div id="containerLess" class="editor-container"></div>
+        </div>
+        <div class="grid-item editor css">
+          <div id="containerCss" class="editor-container"></div>
+        </div>
+      </div>
+    </div>
+    <input
+      type="file"
+      id="LessFile"
+      accept="*.less "
+      style="display: none"
+      onchange="fileSelect(this);"
+    />
+    <!-- LESS.JS -->
+    <script src="https://cdn.jsdelivr.net/npm/less"></script>
+    <!-- MONACO EDITOR -->
+    <script>
+      var require = { paths: { vs: '../node_modules/monaco-editor/min/vs' } };
+    </script>
+    <script src="../node_modules/monaco-editor/min/vs/loader.js"></script>
+    <script src="../node_modules/monaco-editor/min/vs/editor/editor.main.nls.js"></script>
+    <script src="../node_modules/monaco-editor/min/vs/editor/editor.main.js"></script>
+    <!-- MONACO EDITOR -->
+    <script src="lcssp-static.js"></script>
+  </body>
+</html>

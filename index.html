@@ -1,64 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Static Less CSS Playground with Less.js and Monaco Editor</title>
+    <title>Less CSS Playground with Less.js and Monaco Editor</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="stylesheet/less" type="text/css" href="playground.less" />
+    <meta http-equiv="refresh" content="0; URL=/static/index.html" />
   </head>
-  <body>
-    <!-- PLAYGROUND -->
-    <div class="playground-wrapper">
-      <div class="editor less">
-        <div id="containerLess" class="editor-container"></div>
-      </div>
-      <div class="editor css">
-        <div id="containerCss" class="editor-container"></div>
-      </div>
-    </div>
-    <!-- TEMPLATE -->
-    <template id="toolbar">
-      <div class="toolbar">
-        <h1 class="title"></h1>
-        <div class="buttons-toolbar">
-          <div class="button theme">
-            <span class="icon"></span>
-            <span class="text">Theme</span>
-          </div>
-          <div class="button raw">
-            <span class="icon"></span>
-            <span class="text">RAW</span>
-          </div>
-        </div>
-      </div>
-    </template>
-    <!-- SCRIPTS -->
-    <!-- LESS.JS -->
-    <script>
-      var less = {
-        env: 'development',
-        async: false,
-        fileAsync: false,
-        relativeUrls: false,
-      };
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/less"></script>
-    <!-- LESS.JS -->
-    <!-- MONACO EDITOR -->
-    <link
-      rel="stylesheet"
-      data-name="vs/editor/editor.main"
-      href="../node_modules/monaco-editor/min/vs/editor/editor.main.css"
-    />
-
-    <script>
-      var require = { paths: { vs: '../node_modules/monaco-editor/min/vs' } };
-    </script>
-    <script src="../node_modules/monaco-editor/min/vs/loader.js"></script>
-    <script src="../node_modules/monaco-editor/min/vs/editor/editor.main.nls.js"></script>
-    <script src="../node_modules/monaco-editor/min/vs/editor/editor.main.js"></script>
-    <!-- MONACO EDITOR -->
-    <!-- CONFIG -->
-    <script type="module" src="script.js"></script>
-  </body>
+  <body></body>
 </html>

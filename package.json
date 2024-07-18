@@ -4,6 +4,6 @@
   },
   "dependencies": {
     "servor": "^4.0.2",
-    "monaco-editor": "0.26.1"
+    "monaco-editor": "latest"
   }
 }
